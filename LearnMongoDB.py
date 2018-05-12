@@ -186,3 +186,11 @@ print(students.count())
 students.delete_many({})
 print(students.count())
 
+# drop students
+if(db.drop_collection('students')):
+    print("Success to delete the collection of students!")
+
+
+# drop StudentInfo
+if(client.drop_database("StudentInfo")):
+    print("Success to delete the database of StudentInfo!")
